@@ -6,7 +6,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
 {% for page in page_list %}
     <url>
-        <loc>{{ Router.gen_permalink_by_content(page) }}</loc>
+        <loc>{{'csjss.top' + Router.gen_permalink_by_content(page) }}</loc>
         <lastmod>{{ page.get_meta('date').format('YYYY-MM-DD') }}</lastmod>
         <changefreq>always</changefreq>
         <priority>0.8</priority>
@@ -14,7 +14,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {% endfor %}
 {% for post in post_list %}
     <url>
-        <loc>{{ Router.gen_permalink_by_content(post) }}</loc>
+        <loc>{{'csjss.top' + Router.gen_permalink_by_content(post) }}</loc>
         <lastmod>{{ post.get_meta('date').format('YYYY-MM-DD') }}</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
